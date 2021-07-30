@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MVCDemoData.Models.UserinfoModel>
+﻿@model IEnumerable<MVCDemoData.Controllers.UserinfoModel>
 
 @{
     ViewBag.Title = "Index";
@@ -11,23 +11,29 @@
 </p>
 <table class="table">
     <tr>
-        <th></th>
+        <th>Firstname</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Address</th>
     </tr>
 
     @foreach (var item in Model)
     {
-<tr>
-    <td>@item.Firstname</td>
-    <td>@item.LastName</td>
-    <td>@item.Email</td>
-    <td>@item.Address</td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        @Html.ActionLink("Create", "Create", new { /* id=item.PrimaryKey */ })
-    </td>
-</tr>
+        <tr>
+            <td>@item.Firstname</td>
+            <td>@item.LastName</td>
+            <td>@item.Email</td>
+            <td>@item.Address</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+
+
+            </td>
+        </tr>
     }
+
+   
 
 </table>

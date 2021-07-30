@@ -12,7 +12,7 @@ namespace MVCDemoData.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Userinfo
+    public partial class StudentInfo
     {
         public int ID { get; set; }
         public string FName { get; set; }

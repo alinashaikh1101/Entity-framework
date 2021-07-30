@@ -1,6 +1,6 @@
 ﻿
 
-namespace MVCDemoData.Models
+namespace MVCDemoData.Controllers
 {
     public class UserinfoModel
     {

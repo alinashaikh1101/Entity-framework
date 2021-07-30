@@ -13,10 +13,10 @@ namespace MVCDemoData.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MyDBEntities : DbContext
+    public partial class MyDBEntities1 : DbContext
     {
-        public MyDBEntities()
-            : base("name=MyDBEntities")
+        public MyDBEntities1()
+            : base("name=MyDBEntities1")
         {
         }
     
@@ -25,6 +25,7 @@ namespace MVCDemoData.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<StudentInfo> StudentInfoes { get; set; }
         public virtual DbSet<Userinfo> Userinfoes { get; set; }
     }
 }

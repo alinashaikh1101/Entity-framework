@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -8,6 +9,10 @@ namespace MVCDemoData.Controllers
 {
     public class HomeController : Controller
     {
+        private object objContext;
+        private object employeeData;
+        private object dbContext;
+
         public ActionResult Index()
         {
             return View();
@@ -26,5 +31,6 @@ namespace MVCDemoData.Controllers
 
             return View();
         }
+        
     }
 }
