@@ -46,7 +46,7 @@ namespace MVCDemoData.Controllers
 
             return View(userInfoDto);
         }
-        public ActionResult Edit(Int32 ID)
+        public ActionResult Edit(int ID)
         {
             var data = db.StudentInfoes.Where(s => s.ID == ID).FirstOrDefault();
             if (data != null)
@@ -58,14 +58,14 @@ namespace MVCDemoData.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Edit(UserinfoModel userInfoDto)
+        public ActionResult Edit(StudentInfo userInfoDto)
         {
             Int32 ID = (int)TempData["ID"];
             var Studentinfo = db.StudentInfoes.Where(s => s.ID == ID).FirstOrDefault();
             if (Studentinfo != null)
             {
-                Studentinfo.FName = userInfoDto.Firstname;
-                Studentinfo.LName = userInfoDto.LastName;
+                Studentinfo.FName = userInfoDto.FName;
+                Studentinfo.LName = userInfoDto.LName;
                 Studentinfo.Email = userInfoDto.Email;
                 Studentinfo.Address = userInfoDto.Address;
 

@@ -9,10 +9,6 @@ namespace MVCDemoData.Controllers
 {
     public class HomeController : Controller
     {
-        private object objContext;
-        private object employeeData;
-        private object dbContext;
-
         public ActionResult Index()
         {
             return View();
